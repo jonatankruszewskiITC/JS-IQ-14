@@ -1,36 +1,31 @@
 /*
-Write a function that diagonally orders numbers in a n x n matrix, depending on which of the four corners you originate from: upper-left (ul), upper-right (ur), lower-left (ll), lower-right (lr).
+Create a function that takes an array representation of a Minesweeper board, and returns another board where the value of each cell is the amount of its neighbouring mines.
 
 Examples
-diagonalize(3, "ul") ➞ [
- [0, 1, 2],
- [1, 2, 3],
- [2, 3, 4]
-]
+The input may look like this:
 
-diagonalize(4, "ur") ➞ [
- [3, 2, 1, 0],
- [4, 3, 2, 1],
- [5, 4, 3, 2],
- [6, 5, 4, 3]
+[
+  [0, 1, 0, 0],
+  [0, 0, 1, 0],
+  [0, 1, 0, 1],
+  [1, 1, 0, 0],
 ]
+The 0 represents an empty space. The 1 represents a mine.
 
-diagonalize(3, "ll") ➞ [
- [2, 3, 4],
- [1, 2, 3],
- [0, 1, 2]
-]
+You will have to replace each mine with a 9 and each empty space with the number of adjacent mines, the output will look like this:
 
-diagonalize(5, "lr") ➞ [
- [8, 7, 6, 5, 4],
- [7, 6, 5, 4, 3],
- [6, 5, 4, 3, 2],
- [5, 4, 3, 2, 1],
- [4, 3, 2, 1, 0]
+[
+  [1, 9, 2, 1],
+  [2, 3, 9, 2],
+  [3, 9, 4, 9],
+  [9, 9, 3, 1],
 ]
+Notes
+Since in the output the numbers 0-8 are used to determine the amount of adjacent mines, the number 9 will be used to identify the mines instead.
+A wikipedia page explaining how Minesweeper works is available in the Resources tab
 */
 
-function minesweeperNumbers( /*args*/ ) {
+function minesweeperNumbers(/*args*/) {
   //your code
 }
 
